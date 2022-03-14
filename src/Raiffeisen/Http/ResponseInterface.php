@@ -8,7 +8,7 @@ namespace Raiffeisen\Http;
 
 /**
  * Interface ResponseInterface
- * @package Raiffeisen\Message
+ * @package Raiffeisen\Http
  */
 interface ResponseInterface
 {
@@ -51,11 +51,4 @@ interface ResponseInterface
      * @return string
      */
     public function getErrorMessage(): string;
-
-    /**
-     * Raiffeisen error message by code
-     *
-     * @return string
-     */
-    public function getErrorMessageByCode(): string;
 }

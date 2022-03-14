@@ -80,13 +80,9 @@ class RestResponse implements ResponseInterface
      */
     public function getErrorCode(): ?int
     {
-        if (isset($this->data['errorCode'])) {
+        if (isset($this->data['code'])) {
 
-            return (int) $this->data['errorCode'];
-        }
-        if (isset($this->data['ErrorCode'])) {
-
-            return (int) $this->data['ErrorCode'];
+            return (int) $this->data['code'];
         }
 
         return null;
@@ -98,27 +94,9 @@ class RestResponse implements ResponseInterface
      */
     public function getErrorMessage(): string
     {
-        if (isset($this->data['errorMessage'])) {
+        if (isset($this->data['message'])) {
 
-            return $this->data['errorMessage'];
-        }
-        if (isset($this->data['ErrorMessage'])) {
-
-            return $this->data['ErrorMessage'];
-        }
-
-        return '';
-    }
-
-    /**
-     * @return string
-     */
-    public function getErrorMessageByCode(): string
-    {
-        if (isset($this->errorMessages)) {
-            $code = $this->getErrorCode();
-
-            return $this->errorMessages[$code] ?? '';
+            return $this->data['message'];
         }
 
         return '';
