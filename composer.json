@@ -1,0 +1,25 @@
+{
+  "name": "vendor_name/raiffeisen-gateway",
+  "minimum-stability": "stable",
+  "version": "0.1.0",
+  "description": "Raiffeisen REST client",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aslangeri Mokaev",
+      "email": "aslangery@3davinci.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "symfony/http-client": "5.4.x-dev",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Raiffeisen\\": "src/Raiffeisen/"
+    }
+  }
+}
