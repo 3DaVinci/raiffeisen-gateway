@@ -41,7 +41,7 @@ class RestGateway implements GatewayInterface
      */
     public function orderStatus(array $parameters = []): RequestAbstract
     {
-        return $this->createRequest('OrderStatus', $parameters);
+        return $this->createRequest('CheckStatus', $parameters);
     }
 
     /**

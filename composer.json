@@ -1,7 +1,7 @@
 {
   "name": "3davinci/raiffeisen-gateway",
   "minimum-stability": "stable",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Raiffeisen REST client",
   "type": "library",
   "license": "MIT",
