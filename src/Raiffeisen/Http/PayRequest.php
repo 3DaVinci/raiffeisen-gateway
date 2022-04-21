@@ -157,9 +157,8 @@ class PayRequest extends RequestAbstract
             []
         );
 
-        $body = $httpResponse->toArray();
         $responseClassName = $this->responseClassName;
 
-        return $this->response = new $responseClassName($this, $body, $httpResponse->getStatusCode());
+        return $this->response = new $responseClassName($this, [], $httpResponse->getStatusCode());
     }
 }
