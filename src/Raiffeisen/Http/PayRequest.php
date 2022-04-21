@@ -148,4 +148,18 @@ class PayRequest extends RequestAbstract
     {
         return 'pay';
     }
+
+    public function send(): ResponseInterface
+    {
+        $httpResponse = $this->client->request(
+            'GET',
+            $this->getRequestUrl(),
+            []
+        );
+
+        $body = $httpResponse->toArray();
+        $responseClassName = $this->responseClassName;
+
+        return $this->response = new $responseClassName($this, $body, $httpResponse->getStatusCode());
+    }
 }
