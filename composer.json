@@ -12,7 +12,7 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": ">=7.4",
     "symfony/http-client": "5.4.x-dev",
     "ext-json": "*",
     "ext-mbstring": "*"
